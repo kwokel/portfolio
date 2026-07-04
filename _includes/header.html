@@ -1,0 +1,33 @@
+<header class="site-header">
+  <div class="wrap">
+
+    {% if site.active_lang == site.default_lang %}
+      {% assign prefix = "" %}
+    {% else %}
+      {% capture prefix %}/{{ site.active_lang }}{% endcapture %}
+    {% endif %}
+
+    <a class="brand" href="{{ prefix | append: '/' | relative_url }}">{{ site.title }}</a>
+
+    <nav>
+      <a href="{{ prefix | append: '/works/' | relative_url }}">
+        {% if site.active_lang == "de" %}Arbeiten{% else %}Works{% endif %}
+      </a>
+      <a href="{{ prefix | append: '/about/' | relative_url }}">
+        {% if site.active_lang == "de" %}Über mich{% else %}About{% endif %}
+      </a>
+
+      <span class="lang-switch">
+        {% if site.active_lang == site.default_lang %}
+          {# Von DE (kein Präfix) nach EN wechseln: /en davorsetzen #}
+          <a href="{{ page.url | prepend: '/en' | relative_url }}">EN</a>
+        {% else %}
+          {# Von EN nach DE wechseln: /en wieder entfernen #}
+          {% assign de_url = page.url | remove_first: '/en' %}
+          <a href="{{ de_url | relative_url }}">DE</a>
+        {% endif %}
+      </span>
+    </nav>
+
+  </div>
+</header>

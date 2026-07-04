@@ -1,0 +1,51 @@
+# --- Grundeinstellungen ---
+title: "Mira Muster – Copywriting"
+description: "Ausgewählte Texte, Kampagnen und die Gedanken dahinter"
+
+# WICHTIG: auf deine echte GitHub-Pages-URL anpassen.
+# Bei einem User-/Org-Repo (name.github.io):        url: "https://DEINUSERNAME.github.io"
+# Bei einem normalen Projekt-Repo zusätzlich:        baseurl: "/REPO-NAME"
+url: "https://DEINUSERNAME.github.io"
+baseurl: ""
+
+# --- Mehrsprachigkeit (jekyll-polyglot) ---
+languages: ["de", "en"]
+default_lang: "de"
+# Ordner, die NICHT je Sprache dupliziert gebaut werden sollen
+exclude_from_localization: ["assets", "css", "images"]
+parallel_localization: true
+# Erlaubt Polyglot, die Sprache aus dem Ordnernamen zu erkennen
+# (z. B. _works/de/... bzw. _works/en/...), falls "lang" im Frontmatter fehlt
+derive_lang_from_path: true
+
+# --- Collection für die Arbeiten/Case Studies ---
+collections:
+  works:
+    output: true
+    # :name = Dateiname ohne Endung -> gleicher Slug in DE und EN
+    permalink: /works/:name/
+
+defaults:
+  - scope:
+      path: ""
+      type: "works"
+    values:
+      layout: "work"
+  - scope:
+      path: ""
+    values:
+      layout: "default"
+
+plugins:
+  - jekyll-polyglot
+  - jekyll-sitemap
+  - jekyll-feed
+
+markdown: kramdown
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - vendor
+  - node_modules
