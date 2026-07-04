@@ -6,7 +6,7 @@ description: "Ausgewählte Texte, Kampagnen und die Gedanken dahinter"
 # Bei einem User-/Org-Repo (name.github.io):        url: "https://DEINUSERNAME.github.io"
 # Bei einem normalen Projekt-Repo zusätzlich:        baseurl: "/REPO-NAME"
 url: "https://kwokel.github.io"
-baseurl: ""
+baseurl: "/portfolio"
 
 # --- Mehrsprachigkeit (jekyll-polyglot) ---
 languages: ["de", "en"]
