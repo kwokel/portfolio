@@ -5,7 +5,7 @@ description: "Ausgewählte Texte, Kampagnen und die Gedanken dahinter"
 # WICHTIG: auf deine echte GitHub-Pages-URL anpassen.
 # Bei einem User-/Org-Repo (name.github.io):        url: "https://DEINUSERNAME.github.io"
 # Bei einem normalen Projekt-Repo zusätzlich:        baseurl: "/REPO-NAME"
-url: "https://DEINUSERNAME.github.io"
+url: "https://kwokel.github.io"
 baseurl: ""
 
 # --- Mehrsprachigkeit (jekyll-polyglot) ---
