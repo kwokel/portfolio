@@ -1,0 +1,56 @@
+media:
+  input: assets/images/works
+  output: /assets/images/works
+
+content:
+  - name: works
+    label: "Works"
+    type: collection
+    path: _works
+    view:
+      fields: [title, date, coverImage]
+    fields:
+      - name: title
+        label: "Title"
+        type: string
+      - name: date
+        label: "Date"
+        type: date
+      - name: excerpt
+        label: "Short description"
+        type: text
+        description: "Shown in the overview list"
+      - name: coverImage
+        label: "Cover image"
+        type: image
+      - name: published
+        label: "Published"
+        type: boolean
+        default: true
+      - name: body
+        label: "Content"
+        type: rich-text
+
+  - name: home
+    label: "Homepage"
+    type: file
+    path: index.md
+    fields:
+      - name: title
+        type: string
+      - name: heading
+        label: "Large heading"
+        type: string
+      - name: body
+        label: "Intro text"
+        type: rich-text
+
+  - name: about
+    label: "About"
+    type: file
+    path: about.md
+    fields:
+      - name: title
+        type: string
+      - name: body
+        type: rich-text
