@@ -24,7 +24,7 @@ body {
 
 a { color: inherit; }
 
-/* ---- Header ---- */
+/* Header */
 .site-header .wrap {
   display: flex;
   align-items: center;
@@ -47,21 +47,10 @@ a { color: inherit; }
   font-size: 0.95rem;
 }
 
-.site-header nav a {
-  text-decoration: none;
-}
-
+.site-header nav a { text-decoration: none; }
 .site-header nav a:hover { text-decoration: underline; }
 
-.lang-switch a {
-  border: 1px solid var(--fg);
-  padding: 0.15rem 0.55rem;
-  border-radius: 4px;
-  font-size: 0.75rem;
-  font-weight: 600;
-}
-
-/* ---- Große Headline (wie "Blog." im Vercel-Template) ---- */
+/* Große Headline */
 .intro-heading {
   padding: 3.5rem 0 2.5rem;
   border-bottom: 1px solid var(--border);
@@ -84,10 +73,8 @@ a { color: inherit; }
   margin: 0;
 }
 
-/* ---- Hero Post ---- */
-.hero-post {
-  margin-bottom: 4rem;
-}
+/* Hero Post */
+.hero-post { margin-bottom: 4rem; }
 
 .hero-post .hero-cover img {
   width: 100%;
@@ -103,14 +90,8 @@ a { color: inherit; }
   margin: 1.5rem 0 0.5rem;
 }
 
-.hero-post h2 a {
-  text-decoration: none;
-}
-
-.hero-post time {
-  color: var(--muted);
-  font-size: 0.9rem;
-}
+.hero-post h2 a { text-decoration: none; }
+.hero-post time { color: var(--muted); font-size: 0.9rem; }
 
 .hero-post .excerpt {
   font-size: 1.15rem;
@@ -119,7 +100,7 @@ a { color: inherit; }
   margin-top: 0.75rem;
 }
 
-/* ---- More Stories Grid ---- */
+/* More Stories Grid */
 .more-stories {
   border-top: 1px solid var(--border);
   padding-top: 2.5rem;
@@ -151,30 +132,13 @@ a { color: inherit; }
   display: block;
 }
 
-.work-card h2 {
-  font-size: 1.4rem;
-  line-height: 1.25;
-  margin: 1rem 0 0.35rem;
-}
+.work-card h2 { font-size: 1.4rem; line-height: 1.25; margin: 1rem 0 0.35rem; }
+.work-card h2 a { text-decoration: none; }
+.work-card time { color: var(--muted); font-size: 0.85rem; }
+.work-card .excerpt { color: var(--muted); margin-top: 0.5rem; }
 
-.work-card h2 a {
-  text-decoration: none;
-}
-
-.work-card time {
-  color: var(--muted);
-  font-size: 0.85rem;
-}
-
-.work-card .excerpt {
-  color: var(--muted);
-  margin-top: 0.5rem;
-}
-
-/* ---- Single work page ---- */
-.work-single {
-  padding: 2.5rem 0 4rem;
-}
+/* Single work page */
+.work-single { padding: 2.5rem 0 4rem; }
 
 .work-single header h1 {
   font-size: clamp(2rem, 5vw, 3.25rem);
@@ -183,9 +147,7 @@ a { color: inherit; }
   letter-spacing: -0.02em;
 }
 
-.work-single time {
-  color: var(--muted);
-}
+.work-single time { color: var(--muted); }
 
 .work-single .cover {
   width: 100%;
@@ -195,35 +157,14 @@ a { color: inherit; }
   object-fit: cover;
 }
 
-.work-single .content {
-  font-size: 1.1rem;
-  max-width: 68ch;
-}
+.work-single .content { font-size: 1.1rem; max-width: 68ch; }
 
-/* ---- Footer (dunkles CTA-Band) ---- */
-.site-footer {
-  background: var(--dark-bg);
-  color: #fff;
-  margin-top: 2rem;
-}
+/* Footer */
+.site-footer { background: var(--dark-bg); color: #fff; margin-top: 2rem; }
 
-.footer-inner {
-  padding: 4rem 1.5rem;
-  text-align: center;
-}
+.footer-inner { padding: 4rem 1.5rem; text-align: center; }
 
-.footer-inner h3 {
-  font-size: clamp(1.5rem, 4vw, 2.25rem);
-  margin: 0 0 1rem;
-}
+.footer-inner h3 { font-size: clamp(1.5rem, 4vw, 2.25rem); margin: 0 0 1rem; }
+.footer-inner a { color: #fff; text-decoration: underline; }
 
-.footer-inner a {
-  color: #fff;
-  text-decoration: underline;
-}
-
-.footer-inner .copyright {
-  margin-top: 2rem;
-  color: #888;
-  font-size: 0.85rem;
-}
+.footer-inner .copyright { margin-top: 2rem; color: #888; font-size: 0.85rem; }

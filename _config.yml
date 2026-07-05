@@ -1,18 +1,10 @@
-# --- Grundeinstellungen ---
 title: "Karsten Wokel – Copywriting"
-description: "Ausgewählte Texte, Kampagnen und die Gedanken dahinter"
+description: "Selected copywriting work and the thinking behind it"
 
+# Projekt-Repo (kwokel.github.io/portfolio) -> baseurl nötig
 url: "https://kwokel.github.io"
 baseurl: "/portfolio"
 
-# --- Mehrsprachigkeit (jekyll-polyglot) ---
-languages: ["de", "en"]
-default_lang: "de"
-exclude_from_localization: ["assets", "css", "images"]
-parallel_localization: true
-derive_lang_from_path: true
-
-# --- Collection für die Arbeiten/Case Studies ---
 collections:
   works:
     output: true
@@ -30,7 +22,6 @@ defaults:
       layout: "default"
 
 plugins:
-  - jekyll-polyglot
   - jekyll-sitemap
   - jekyll-feed
 

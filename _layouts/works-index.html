@@ -1,0 +1,24 @@
+---
+layout: default
+---
+<section class="intro-heading">
+  <h1>{{ page.title }}<span class="dot">.</span></h1>
+</section>
+
+{% assign sorted_works = site.works | sort: "date" | reverse %}
+<section class="more-stories">
+  <div class="work-grid">
+    {% for work in sorted_works %}
+      <article class="work-card">
+        {% if work.coverImage %}
+          <a href="{{ work.url | relative_url }}">
+            <img src="{{ work.coverImage | relative_url }}" alt="{{ work.title }}">
+          </a>
+        {% endif %}
+        <h2><a href="{{ work.url | relative_url }}">{{ work.title }}</a></h2>
+        <time datetime="{{ work.date | date_to_xmlschema }}">{{ work.date | date: "%B %-d, %Y" }}</time>
+        <p class="excerpt">{{ work.excerpt }}</p>
+      </article>
+    {% endfor %}
+  </div>
+</section>

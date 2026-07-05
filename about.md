@@ -1,10 +1,9 @@
 ---
 layout: default
-lang: de
 permalink: /about/
-title: "Über mich"
+title: "About"
 ---
-# Über mich
+# About
 
-Hier steht deine kurze Bio: wer du bist, worauf du dich als
-Copywriterin/Copywriter spezialisierst und wie man dich erreicht.
+This is where your short bio goes: who you are, what you specialize
+in as a copywriter, and how to get in touch.

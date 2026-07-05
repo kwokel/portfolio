@@ -1,12 +1,8 @@
 source "https://rubygems.org"
 
-gem "jekyll", "~> 4.3"
+# Dieses Gem bündelt exakt die Jekyll-Version + erlaubten Plugins,
+# die GitHub Pages selbst zum Bauen verwendet. Dadurch verhält sich
+# "bundle exec jekyll serve" lokal genauso wie der Live-Build.
+gem "github-pages", group: :jekyll_plugins
 
-group :jekyll_plugins do
-  gem "jekyll-polyglot"
-  gem "jekyll-sitemap"
-  gem "jekyll-feed"
-end
-
-# Für "jekyll serve" mit neueren Ruby-Versionen nötig
 gem "webrick", "~> 1.8"

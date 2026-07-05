@@ -4,7 +4,7 @@ layout: default
 <section class="intro-heading">
   {% assign heading = page.heading | default: site.title %}
   <h1>{{ heading }}<span class="dot">.</span></h1>
-  <p class="tagline">{{ content }}</p>
+  <div class="tagline">{{ content }}</div>
 </section>
 
 {% assign sorted_works = site.works | sort: "date" | reverse %}
@@ -19,16 +19,14 @@ layout: default
     </a>
   {% endif %}
   <h2><a href="{{ hero.url | relative_url }}">{{ hero.title }}</a></h2>
-  <time datetime="{{ hero.date | date_to_xmlschema }}">{{ hero.date | date: "%d.%m.%Y" }}</time>
+  <time datetime="{{ hero.date | date_to_xmlschema }}">{{ hero.date | date: "%B %-d, %Y" }}</time>
   <p class="excerpt">{{ hero.excerpt }}</p>
 </section>
 {% endif %}
 
 {% if rest.size > 0 %}
 <section class="more-stories">
-  <h3 class="section-label">
-    {% if site.active_lang == "de" %}Weitere Arbeiten{% else %}More Stories{% endif %}
-  </h3>
+  <h3 class="section-label">More Stories</h3>
   <div class="work-grid">
     {% for work in rest %}
       <article class="work-card">
@@ -38,7 +36,7 @@ layout: default
           </a>
         {% endif %}
         <h2><a href="{{ work.url | relative_url }}">{{ work.title }}</a></h2>
-        <time datetime="{{ work.date | date_to_xmlschema }}">{{ work.date | date: "%d.%m.%Y" }}</time>
+        <time datetime="{{ work.date | date_to_xmlschema }}">{{ work.date | date: "%B %-d, %Y" }}</time>
         <p class="excerpt">{{ work.excerpt }}</p>
       </article>
     {% endfor %}

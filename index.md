@@ -1,6 +1,8 @@
 ---
-title: Karsten Wokel – Copywriting
+layout: home
+permalink: /
+title: "Karsten Wokel – Copywriting"
+heading: "Portfolio"
 ---
-Ich schreibe Texte, die Marken eine Stimme geben. Hier findest du eine
-Auswahl meiner Arbeiten – inklusive der Gedanken und der Strategie,
-die jeweils dahinterstecken.
+I write copy that gives brands a voice. Here you'll find a selection
+of my work – including the thinking and strategy behind each project.
