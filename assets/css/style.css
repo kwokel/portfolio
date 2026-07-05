@@ -1,16 +1,16 @@
 :root {
-  --max-width: 720px;
-  --fg: #111;
+  --max-width: 1150px;
+  --fg: #000;
   --muted: #666;
   --border: #eaeaea;
-  --accent: #111;
+  --dark-bg: #000;
 }
 
 * { box-sizing: border-box; }
 
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Inter", "Segoe UI", Helvetica, Arial, sans-serif;
   color: var(--fg);
   line-height: 1.6;
   background: #fff;
@@ -22,70 +22,142 @@ body {
   padding: 0 1.5rem;
 }
 
-/* Header */
+a { color: inherit; }
+
+/* ---- Header ---- */
 .site-header .wrap {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 1.75rem 1.5rem;
+  padding: 1.5rem 1.5rem;
   border-bottom: 1px solid var(--border);
 }
 
 .site-header .brand {
-  font-weight: 700;
+  font-weight: 800;
   text-decoration: none;
   color: var(--fg);
+  font-size: 1.1rem;
 }
 
 .site-header nav {
   display: flex;
   align-items: center;
-  gap: 1.25rem;
+  gap: 1.5rem;
   font-size: 0.95rem;
 }
 
 .site-header nav a {
-  color: var(--fg);
   text-decoration: none;
 }
 
 .site-header nav a:hover { text-decoration: underline; }
 
 .lang-switch a {
-  border: 1px solid var(--border);
-  padding: 0.15rem 0.5rem;
+  border: 1px solid var(--fg);
+  padding: 0.15rem 0.55rem;
   border-radius: 4px;
-  font-size: 0.8rem;
+  font-size: 0.75rem;
+  font-weight: 600;
 }
 
-/* Intro */
-.intro {
-  padding: 3rem 0 1rem;
+/* ---- Große Headline (wie "Blog." im Vercel-Template) ---- */
+.intro-heading {
+  padding: 3.5rem 0 2.5rem;
+  border-bottom: 1px solid var(--border);
+  margin-bottom: 2.5rem;
+}
+
+.intro-heading h1 {
+  font-size: clamp(2.5rem, 6vw, 4.5rem);
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  margin: 0 0 0.75rem;
+}
+
+.intro-heading .dot { color: var(--muted); }
+
+.intro-heading .tagline {
   font-size: 1.15rem;
   color: var(--muted);
+  max-width: 40ch;
+  margin: 0;
 }
 
-/* Work list */
-.work-list {
+/* ---- Hero Post ---- */
+.hero-post {
+  margin-bottom: 4rem;
+}
+
+.hero-post .hero-cover img {
+  width: 100%;
+  aspect-ratio: 2 / 1;
+  object-fit: cover;
+  border-radius: 10px;
+  display: block;
+}
+
+.hero-post h2 {
+  font-size: clamp(1.8rem, 4vw, 2.75rem);
+  line-height: 1.15;
+  margin: 1.5rem 0 0.5rem;
+}
+
+.hero-post h2 a {
+  text-decoration: none;
+}
+
+.hero-post time {
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.hero-post .excerpt {
+  font-size: 1.15rem;
+  color: var(--muted);
+  max-width: 60ch;
+  margin-top: 0.75rem;
+}
+
+/* ---- More Stories Grid ---- */
+.more-stories {
+  border-top: 1px solid var(--border);
+  padding-top: 2.5rem;
+  padding-bottom: 4rem;
+}
+
+.section-label {
+  font-size: 2rem;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  margin: 0 0 2rem;
+}
+
+.work-grid {
   display: grid;
-  gap: 2.5rem;
-  padding: 2rem 0 4rem;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2.5rem 2rem;
+}
+
+@media (max-width: 700px) {
+  .work-grid { grid-template-columns: 1fr; }
 }
 
 .work-card img {
   width: 100%;
-  border-radius: 8px;
   aspect-ratio: 16 / 9;
   object-fit: cover;
+  border-radius: 8px;
+  display: block;
 }
 
 .work-card h2 {
-  margin: 0.75rem 0 0.25rem;
   font-size: 1.4rem;
+  line-height: 1.25;
+  margin: 1rem 0 0.35rem;
 }
 
 .work-card h2 a {
-  color: var(--fg);
   text-decoration: none;
 }
 
@@ -94,19 +166,21 @@ body {
   font-size: 0.85rem;
 }
 
-.work-card p {
+.work-card .excerpt {
   color: var(--muted);
   margin-top: 0.5rem;
 }
 
-/* Single work page */
+/* ---- Single work page ---- */
 .work-single {
-  padding: 2rem 0 4rem;
+  padding: 2.5rem 0 4rem;
 }
 
 .work-single header h1 {
-  margin-bottom: 0.25rem;
-  font-size: 2rem;
+  font-size: clamp(2rem, 5vw, 3.25rem);
+  line-height: 1.15;
+  margin-bottom: 0.5rem;
+  letter-spacing: -0.02em;
 }
 
 .work-single time {
@@ -115,22 +189,41 @@ body {
 
 .work-single .cover {
   width: 100%;
-  border-radius: 8px;
-  margin: 1.5rem 0;
+  border-radius: 10px;
+  margin: 2rem 0;
+  aspect-ratio: 2 / 1;
+  object-fit: cover;
 }
 
 .work-single .content {
-  font-size: 1.05rem;
+  font-size: 1.1rem;
+  max-width: 68ch;
 }
 
-/* Footer */
+/* ---- Footer (dunkles CTA-Band) ---- */
 .site-footer {
-  border-top: 1px solid var(--border);
+  background: var(--dark-bg);
+  color: #fff;
   margin-top: 2rem;
 }
 
-.site-footer .wrap {
-  padding: 1.5rem;
-  color: var(--muted);
+.footer-inner {
+  padding: 4rem 1.5rem;
+  text-align: center;
+}
+
+.footer-inner h3 {
+  font-size: clamp(1.5rem, 4vw, 2.25rem);
+  margin: 0 0 1rem;
+}
+
+.footer-inner a {
+  color: #fff;
+  text-decoration: underline;
+}
+
+.footer-inner .copyright {
+  margin-top: 2rem;
+  color: #888;
   font-size: 0.85rem;
 }
