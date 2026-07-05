@@ -1,9 +1,5 @@
 ---
-layout: home
-lang: en
-permalink: /
-title: "Mira Muster – Copywriting"
-heading: "Portfolio"
+title: Karsten Wokel – Copywriting
 ---
 I write copy that gives brands a voice. Here you'll find a selection
 of my work – including the thinking and strategy behind each project.
