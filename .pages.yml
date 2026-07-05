@@ -39,9 +39,11 @@ content:
       - name: layout
         type: string
         default: "home"
+        hidden: true
       - name: permalink
         type: string
         default: "/"
+        hidden: true
       - name: title
         type: string
       - name: heading
@@ -59,9 +61,11 @@ content:
       - name: layout
         type: string
         default: "default"
+        hidden: true
       - name: permalink
         type: string
         default: "/about/"
+        hidden: true
       - name: title
         type: string
       - name: body
