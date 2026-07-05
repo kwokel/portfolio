@@ -36,6 +36,12 @@ content:
     type: file
     path: index.md
     fields:
+      - name: layout
+        type: string
+        default: "home"
+      - name: permalink
+        type: string
+        default: "/"
       - name: title
         type: string
       - name: heading
@@ -50,6 +56,12 @@ content:
     type: file
     path: about.md
     fields:
+      - name: layout
+        type: string
+        default: "default"
+      - name: permalink
+        type: string
+        default: "/about/"
       - name: title
         type: string
       - name: body
