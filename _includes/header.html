@@ -17,16 +17,8 @@
         {% if site.active_lang == "de" %}Über mich{% else %}About{% endif %}
       </a>
 
-      <span class="lang-switch">
-        {% if site.active_lang == site.default_lang %}
-          {# Von DE (kein Präfix) nach EN wechseln: /en davorsetzen #}
-          <a href="{{ page.url | prepend: '/en' | relative_url }}">EN</a>
-        {% else %}
-          {# Von EN nach DE wechseln: /en wieder entfernen #}
-          {% assign de_url = page.url | remove_first: '/en' %}
-          <a href="{{ de_url | relative_url }}">DE</a>
-        {% endif %}
-      </span>
+      {% if site.active_lang == site.default_lang %} {% assign prefix = "" %} {% else %} {% capture prefix %}/{{ site.active_lang }}{% endcapture %} {% endif %} {{ site.title }}
+{% if site.active_lang == "de" %}Arbeiten{% else %}Works{% endif %} {% if site.active_lang == "de" %}Über mich{% else %}About{% endif %} {% if site.active_lang == site.default_lang %} EN {% else %} {% assign de_url = page.url | remove_first: '/en' %} DE {% endif %}
     </nav>
 
   </div>
