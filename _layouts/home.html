@@ -1,22 +1,47 @@
 ---
 layout: default
 ---
-<section class="intro">
-  {{ content }}
+<section class="intro-heading">
+  {% assign heading = page.heading | default: site.title %}
+  <h1>{{ heading }}<span class="dot">.</span></h1>
+  <p class="tagline">{{ content }}</p>
 </section>
 
-<section class="work-list">
-  {% assign sorted_works = site.works | sort: "date" | reverse %}
-  {% for work in sorted_works %}
-    <article class="work-card">
-      {% if work.coverImage %}
-        <a href="{{ work.url | relative_url }}">
-          <img src="{{ work.coverImage | relative_url }}" alt="{{ work.title }}">
-        </a>
-      {% endif %}
-      <h2><a href="{{ work.url | relative_url }}">{{ work.title }}</a></h2>
-      <time datetime="{{ work.date | date_to_xmlschema }}">{{ work.date | date: "%d.%m.%Y" }}</time>
-      <p>{{ work.excerpt }}</p>
-    </article>
-  {% endfor %}
+{% assign sorted_works = site.works | sort: "date" | reverse %}
+{% assign hero = sorted_works | first %}
+{% assign rest = sorted_works | offset: 1 %}
+
+{% if hero %}
+<section class="hero-post">
+  {% if hero.coverImage %}
+    <a href="{{ hero.url | relative_url }}" class="hero-cover">
+      <img src="{{ hero.coverImage | relative_url }}" alt="{{ hero.title }}">
+    </a>
+  {% endif %}
+  <h2><a href="{{ hero.url | relative_url }}">{{ hero.title }}</a></h2>
+  <time datetime="{{ hero.date | date_to_xmlschema }}">{{ hero.date | date: "%d.%m.%Y" }}</time>
+  <p class="excerpt">{{ hero.excerpt }}</p>
 </section>
+{% endif %}
+
+{% if rest.size > 0 %}
+<section class="more-stories">
+  <h3 class="section-label">
+    {% if site.active_lang == "de" %}Weitere Arbeiten{% else %}More Stories{% endif %}
+  </h3>
+  <div class="work-grid">
+    {% for work in rest %}
+      <article class="work-card">
+        {% if work.coverImage %}
+          <a href="{{ work.url | relative_url }}">
+            <img src="{{ work.coverImage | relative_url }}" alt="{{ work.title }}">
+          </a>
+        {% endif %}
+        <h2><a href="{{ work.url | relative_url }}">{{ work.title }}</a></h2>
+        <time datetime="{{ work.date | date_to_xmlschema }}">{{ work.date | date: "%d.%m.%Y" }}</time>
+        <p class="excerpt">{{ work.excerpt }}</p>
+      </article>
+    {% endfor %}
+  </div>
+</section>
+{% endif %}
