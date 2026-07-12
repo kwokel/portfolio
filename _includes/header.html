@@ -1,9 +1,39 @@
 <header class="site-header">
   <div class="wrap">
+
     <a class="brand" href="{{ '/' | relative_url }}">{{ site.title }}</a>
-    <nav>
+
+    <nav class="main-nav">
       <a href="{{ '/works/' | relative_url }}">Works</a>
       <a href="{{ '/about/' | relative_url }}">About</a>
     </nav>
+
+    {% assign translations = site.pages | where: "page_id", page.page_id %}
+
+    {% assign en = translations | where: "lang", "en" | first %}
+    {% assign de = translations | where: "lang", "de" | first %}
+
+    <nav class="language-nav">
+
+      {% if en %}
+        {% if page.lang == "en" %}
+          <strong>EN</strong>
+        {% else %}
+          <a href="{{ en.url | relative_url }}">EN</a>
+        {% endif %}
+      {% endif %}
+
+      |
+
+      {% if de %}
+        {% if page.lang == "de" %}
+          <strong>DE</strong>
+        {% else %}
+          <a href="{{ de.url | relative_url }}">DE</a>
+        {% endif %}
+      {% endif %}
+
+    </nav>
+
   </div>
 </header>

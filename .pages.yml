@@ -30,6 +30,25 @@ content:
       - name: body
         label: "Content"
         type: rich-text
+      - name: lang
+        label: Sprache
+        type: select
+        options:
+          - en
+          - de
+        default: en
+
+      - name: page_id
+        label: Page ID
+        type: string
+
+      - name: meta_title
+        label: Meta Title
+        type: string
+
+      - name: meta_description
+        label: Meta Description
+        type: text  
 
   - name: home
     label: "Homepage"
@@ -46,6 +65,23 @@ content:
         hidden: true
       - name: title
         type: string
+      - name: lang
+        label: Language
+        type: select
+        options:
+          - en
+          - de
+        default: en
+      - name: page_id
+        label: Page ID
+        type: string
+        default: home
+      - name: meta_title
+        label: Meta Title
+        type: string
+      - name: meta_description
+        label: Meta Description
+        type: text  
       - name: heading
         label: "Large heading"
         type: string
@@ -68,5 +104,22 @@ content:
         hidden: true
       - name: title
         type: string
+            - name: lang
+        label: Language
+        type: select
+        options:
+          - en
+          - de
+        default: en
+      - name: page_id
+        label: Page ID
+        type: string
+        default: about
+      - name: meta_title
+        label: Meta Title
+        type: string
+      - name: meta_description
+        label: Meta Description
+        type: text  
       - name: body
         type: rich-text
