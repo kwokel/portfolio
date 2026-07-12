@@ -7,7 +7,11 @@
       <a href="{{ '/works/' | relative_url }}">Works</a>
       <a href="{{ '/about/' | relative_url }}">About</a>
     </nav>
+<p>Current: {{ page.url }}</p>
 
+{% for p in site.pages %}
+  <p>{{ p.url }} | {{ p.lang }} | {{ p.page_id }}</p>
+{% endfor %}
     {% assign translations = site.pages | where: "page_id", page.page_id %}
 
     {% assign en = translations | where: "lang", "en" | first %}
