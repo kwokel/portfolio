@@ -3,35 +3,43 @@ media:
   output: /assets/images/works
 
 content:
+
+  # ==========================
+  # WORKS COLLECTION
+  # ==========================
+
   - name: works
-    label: "Works"
+    label: Works
     type: collection
     path: _works
+
     view:
-      fields: [title, date, coverImage]
+      fields: [title, lang, date]
+
     fields:
       - name: title
-        label: "Title"
+        label: Title
         type: string
+
       - name: date
-        label: "Date"
+        label: Date
         type: date
+
       - name: excerpt
-        label: "Short description"
+        label: Short description
         type: text
-        description: "Shown in the overview list"
+
       - name: coverImage
-        label: "Cover image"
+        label: Cover image
         type: image
+
       - name: published
-        label: "Published"
+        label: Published
         type: boolean
         default: true
-      - name: body
-        label: "Content"
-        type: rich-text
+
       - name: lang
-        label: Sprache
+        label: Language
         type: select
         options:
           - en
@@ -41,87 +49,265 @@ content:
       - name: page_id
         label: Page ID
         type: string
+
       - name: permalink
         label: Permalink
         type: string
+
       - name: meta_title
         label: Meta Title
         type: string
 
       - name: meta_description
         label: Meta Description
-        type: text  
+        type: text
 
-  - name: home
-    label: "Homepage"
-    type: file
-    path: index.md
-    fields:
-      - name: layout
-        type: string
-        default: "home"
-        hidden: true
-      - name: permalink
-        type: string
-        default: "/"
-        hidden: true
-      - name: title
-        type: string
-      - name: lang
-        label: Language
-        type: select
-        options:
-          - en
-          - de
-        default: en
-      - name: page_id
-        label: Page ID
-        type: string
-        default: home
-      - name: meta_title
-        label: Meta Title
-        type: string
-      - name: meta_description
-        label: Meta Description
-        type: text  
-      - name: heading
-        label: "Large heading"
-        type: string
       - name: body
-        label: "Intro text"
+        label: Content
         type: rich-text
 
-  - name: about
-    label: "About"
+  # ==========================
+  # HOME EN
+  # ==========================
+
+  - name: home_en
+    label: Homepage (EN)
     type: file
-    path: about.md
+    path: index.md
+
     fields:
       - name: layout
         type: string
-        default: "default"
         hidden: true
+
       - name: permalink
         type: string
-        default: "/about/"
         hidden: true
+
       - name: title
         type: string
-            - name: lang
-        label: Language
-        type: select
-        options:
-          - en
-          - de
-        default: en
-      - name: page_id
-        label: Page ID
+
+      - name: heading
         type: string
-        default: about
+
+      - name: lang
+        type: string
+        hidden: true
+
+      - name: page_id
+        type: string
+        hidden: true
+
       - name: meta_title
         label: Meta Title
         type: string
+
       - name: meta_description
         label: Meta Description
-        type: text  
+        type: text
+
+      - name: body
+        type: rich-text
+
+  # ==========================
+  # HOME DE
+  # ==========================
+
+  - name: home_de
+    label: Homepage (DE)
+    type: file
+    path: de/index.md
+
+    fields:
+      - name: layout
+        type: string
+        hidden: true
+
+      - name: permalink
+        type: string
+        hidden: true
+
+      - name: title
+        type: string
+
+      - name: heading
+        type: string
+
+      - name: lang
+        type: string
+        hidden: true
+
+      - name: page_id
+        type: string
+        hidden: true
+
+      - name: meta_title
+        label: Meta Title
+        type: string
+
+      - name: meta_description
+        label: Meta Description
+        type: text
+
+      - name: body
+        type: rich-text
+
+  # ==========================
+  # ABOUT EN
+  # ==========================
+
+  - name: about_en
+    label: About (EN)
+    type: file
+    path: about.md
+
+    fields:
+      - name: layout
+        type: string
+        hidden: true
+
+      - name: permalink
+        type: string
+        hidden: true
+
+      - name: title
+        type: string
+
+      - name: lang
+        type:string
+        hidden: true
+
+      - name: page_id
+        type: string
+        hidden: true
+
+      - name: meta_title
+        label: Meta Title
+        type: string
+
+      - name: meta_description
+        label: Meta Description
+        type: text
+
+      - name: body
+        type: rich-text
+
+  # ==========================
+  # ABOUT DE
+  # ==========================
+
+  - name: about_de
+    label: About (DE)
+    type: file
+    path: de/about.md
+
+    fields:
+      - name: layout
+        type: string
+        hidden: true
+
+      - name: permalink
+        type: string
+        hidden: true
+
+      - name: title
+        type: string
+
+      - name: lang
+        type: string
+        hidden: true
+
+      - name: page_id
+        type: string
+        hidden: true
+
+      - name: meta_title
+        label: Meta Title
+        type: string
+
+      - name: meta_description
+        label: Meta Description
+        type: text
+
+      - name: body
+        type: rich-text
+
+  # ==========================
+  # WORKS PAGE EN
+  # ==========================
+
+  - name: works_page_en
+    label: Works Overview (EN)
+    type: file
+    path: works.md
+
+    fields:
+      - name: layout
+        type: string
+        hidden: true
+
+      - name: permalink
+        type: string
+        hidden: true
+
+      - name: title
+        type: string
+
+      - name: lang
+        type: string
+        hidden: true
+
+      - name: page_id
+        type: string
+        hidden: true
+
+      - name: meta_title
+        label: Meta Title
+        type: string
+
+      - name: meta_description
+        label: Meta Description
+        type: text
+
+      - name: body
+        type: rich-text
+
+  # ==========================
+  # WORKS PAGE DE
+  # ==========================
+
+  - name: works_page_de
+    label: Works Overview (DE)
+    type: file
+    path: de/works.md
+
+    fields:
+      - name: layout
+        type: string
+        hidden: true
+
+      - name: permalink
+        type: string
+        hidden: true
+
+      - name: title
+        type: string
+
+      - name: lang
+        type: string
+        hidden: true
+
+      - name: page_id
+        type: string
+        hidden: true
+
+      - name: meta_title
+        label: Meta Title
+        type: string
+
+      - name: meta_description
+        label: Meta Description
+        type: text
+
       - name: body
         type: rich-text
