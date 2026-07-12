@@ -85,10 +85,10 @@ content:
         type: string
         hidden: true
 
-      - name: title
+      - name: Title
         type: string
 
-      - name: heading
+      - name: Heading
         type: string
 
       - name: lang
@@ -98,14 +98,6 @@ content:
       - name: page_id
         type: string
         hidden: true
-
-      - name: meta_title
-        label: Meta Title
-        type: string
-
-      - name: meta_description
-        label: Meta Description
-        type: text
 
       - name: body
         type: rich-text
@@ -142,14 +134,6 @@ content:
         type: string
         hidden: true
 
-      - name: meta_title
-        label: Meta Title
-        type: string
-
-      - name: meta_description
-        label: Meta Description
-        type: text
-
       - name: body
         type: rich-text
 
@@ -181,14 +165,6 @@ content:
       - name: page_id
         type: string
         hidden: true
-
-      - name: meta_title
-        label: Meta Title
-        type: string
-
-      - name: meta_description
-        label: Meta Description
-        type: text
 
       - name: body
         type: rich-text
@@ -222,14 +198,6 @@ content:
         type: string
         hidden: true
 
-      - name: meta_title
-        label: Meta Title
-        type: string
-
-      - name: meta_description
-        label: Meta Description
-        type: text
-
       - name: body
         type: rich-text
 
@@ -262,14 +230,6 @@ content:
         type: string
         hidden: true
 
-      - name: meta_title
-        label: Meta Title
-        type: string
-
-      - name: meta_description
-        label: Meta Description
-        type: text
-
       - name: body
         type: rich-text
 
@@ -301,14 +261,6 @@ content:
       - name: page_id
         type: string
         hidden: true
-
-      - name: meta_title
-        label: Meta Title
-        type: string
-
-      - name: meta_description
-        label: Meta Description
-        type: text
 
       - name: body
         type: rich-text
