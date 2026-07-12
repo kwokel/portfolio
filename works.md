@@ -1,5 +1,9 @@
 ---
-layout: works-index
+layout: default
 permalink: /works/
-title: "Works"
+
+title: Works
+
+lang: en
+page_id: works
 ---
