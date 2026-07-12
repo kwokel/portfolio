@@ -9,7 +9,7 @@ content:
   # ==========================
 
   - name: works
-    label: Works
+    label: TEST123
     type: collection
     path: _works
 
