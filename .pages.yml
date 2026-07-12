@@ -41,7 +41,9 @@ content:
       - name: page_id
         label: Page ID
         type: string
-
+      - name: permalink
+        label: Permalink
+        type: string
       - name: meta_title
         label: Meta Title
         type: string

@@ -8,7 +8,6 @@ baseurl: "/portfolio"
 collections:
   works:
     output: true
-    permalink: /works/:name/
 
 defaults:
   - scope:

@@ -1,18 +1,26 @@
 <header class="site-header">
   <div class="wrap">
 
-    <a class="brand" href="{{ '/' | relative_url }}">{{ site.title }}</a>
+    <a class="brand"
+      href="{% if page.lang == 'de' %}{{ '/de/' | relative_url }}{% else %}{{ '/' | relative_url }}{% endif %}">
+      {{ site.title }}
+    </a>
 
     <nav class="main-nav">
-      <a href="{{ '/works/' | relative_url }}">Works</a>
-      <a href="{{ '/about/' | relative_url }}">About</a>
+        {% if page.lang == "de" %}
+          <a href="{{ '/de/works/' | relative_url }}">Arbeiten</a>
+          <a href="{{ '/de/about/' | relative_url }}">Über mich</a>
+        {% else %}
+          <a href="{{ '/works/' | relative_url }}">Works</a>
+          <a href="{{ '/about/' | relative_url }}">About</a>
+        {% endif %}
     </nav>
-<p>Current: {{ page.url }}</p>
 
-{% for p in site.pages %}
-  <p>{{ p.url }} | {{ p.lang }} | {{ p.page_id }}</p>
-{% endfor %}
-    {% assign translations = site.pages | where: "page_id", page.page_id %}
+    {% if page.collection == "works" %}
+      {% assign translations = site.works | where: "page_id", page.page_id %}
+    {% else %}
+      {% assign translations = site.pages | where: "page_id", page.page_id %}
+    {% endif %}
 
     {% assign en = translations | where: "lang", "en" | first %}
     {% assign de = translations | where: "lang", "de" | first %}
