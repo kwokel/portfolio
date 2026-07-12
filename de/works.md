@@ -1,12 +1,12 @@
 ---
-layout: default
+layout: works-index
 permalink: /de/works/
 
-title: Arbeiten von Karsten
+title: Arbeiten
 
 lang: de
 page_id: works
 
 meta_title: Arbeiten | Karsten Wokel
-meta_description: Lerne Karsten Wokel und seine Arbeit als Copywriter kennen.
+meta_description: Mein Copywriting-Portfolio.
 ---
