@@ -1,4 +1,4 @@
-—
+---
 title: Nike Campaign
 
 permalink: /works/nike/
@@ -8,4 +8,4 @@ page_id: nike
 
 meta_title: Nike Campaign | Karsten Wokel
 meta_description: …
-—
+---
