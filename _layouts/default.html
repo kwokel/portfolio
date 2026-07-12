@@ -6,7 +6,7 @@
 <body>
   {% include header.html %}
   <main class="wrap">
-  {% unless page.layout == "home" or page.layout == "work" %}
+  {% unless page.layout == "home" or page.layout == "work" or page.layout == "works-index" %}
     <section class="intro-heading">
       <h1>{{ page.title }}<span class="dot">.</span></h1>
     </section>
