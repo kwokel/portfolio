@@ -42,8 +42,9 @@ content:
         label: Language
         type: select
         options:
-          - en
-          - de
+          values:
+            - en
+            - de
         default: en
 
       - name: page_id
@@ -174,7 +175,7 @@ content:
         type: string
 
       - name: lang
-        type:string
+        type: string
         hidden: true
 
       - name: page_id
